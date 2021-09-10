@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cover.css" />
+    <link rel="stylesheet" href="page.css" />
+    <title>Document</title>
+  </head>
+  <body data-barba="wrapper">
+    <canvas></canvas>
+    <!-- 过场动画 -->
+    <div class="load__container">
+      <div class="loading-screen"></div>
+    </div>
+    <div data-barba="container" data-barba-namespace="">
+      <div class="l-nav">
+        <!-- 创建一个装logo的盒子 -->
+        <h1 class="l-nav__logo">
+          <a href="index.html">
+            <!-- 放入素材 -->
+            <img src="images/piano_logo.png" alt="" />
+          </a>
+        </h1>
+        <!-- 创建一个content的盒子 -->
+        <div class="l-nav__content">
+          <!-- 创建一个装menu的盒子 -->
+          <ul class="l-nav__menu">
+            <div class="l-nav__menu__item -blue">
+              <a class="l-nav__text" href="about.html">
+                <img class="off" src="images/nav_about.svg" alt="" />
+                <img class="on" src="images/nav_about__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -blue" href="about.html"> </a>
+            </div>
+            <div class="l-nav__menu__item -green">
+              <a class="l-nav__text" href="resume.html">
+                <img class="off" src="images/nav_news.svg" alt="" />
+                <img class="on" src="images/nav_resume_on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -green" href="resume.html"> </a>
+            </div>
+            <div class="l-nav__menu__item -red">
+              <a class="l-nav__text" href="works.html">
+                <img class="off" src="images/nav_interactwork.svg" alt="" />
+                <img class="on" src="images/nav_interactwork__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -red" href="works.html"> </a>
+            </div>
+            <div class="l-nav__menu__item -yellow">
+              <a class="l-nav__text" href="otherswork.html">
+                <img class="off" src="images/nav_others.svg" alt="" />
+                <img class="on" src="images/nav_others__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -yellow" href="otherswork.html"> </a>
+            </div>
+            <div class="l-nav__menu__item -purple">
+              <a class="l-nav__text" href="outcome.html">
+                <img class="off" src="images/nav_outcome.svg" alt="" />
+                <img class="on" src="images/nav_outcome__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -purple" href="outcome.html"> </a>
+            </div>
+          </ul>
+          <!-- 创建一个组，没有实际含义 -->
+          <div class="l-nav__group">
+            <!-- 创建了一个装infomenu的盒子，没有设置宽高 -->
+            <div class="l-nav__infomenu">
+              <div class="l-nav__item l-nav__ad">
+                <a
+                  href="https://ixd-exhibit.uqcloud.net/plus864/"
+                  target="_blank"
+                >
+                  <div class="test">
+                    <img src="images/team_website.png" alt="" />
+                  </div>
+                  <!-- <img src="images/sayo.jpeg" alt=""> -->
+                </a>
+              </div>
+              <div class="l-nav__item l-nav__ad">
+                <a
+                  href="https://miro.com/app/board/o9J_lS_Ctiw=/"
+                  target="_blank"
+                >
+                  <div class="test">
+                    <img src="images/journal.png" alt="" />
+                  </div>
+                  <!-- <img src="images/sayo.jpeg" alt=""> -->
+                </a>
+              </div>
+            </div>
+            <div class="l-nav__copyright">
+              <p class="l-nav__copyrightTxt">
+                ©2021 zmxxb520@gmail.com <br />Jiahao Hou
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main class="l-main__wrapper">
+        <div class="l-page">
+          <div class="l-decoration">
+            <div class="star1"></div>
+            <div class="star2"></div>
+          </div>
+          <div class="l-page__content">
+            <h1 class="l-page__Ttl">Actual Product& Experience</h1>
+
+            <h1 class="title">Final product(actual)</h1>
+            <p>
+              Due to the limitations of technical capabilities and resources,
+              the team's product design is still partially flawed, but the basic
+              prototype of the product has been realized. Specifically, the
+              team's current prototype is able to click a note on a sheet of
+              music to know which key it corresponds to. At the same time, when
+              the user presses the corresponding key, the corresponding key in
+              the score also lights up. In addition, when the user starts to
+              play a note, the electronic pet will dance. At the same time,
+              users can switch the type of pet according to their preferences.
+            </p>
+            <div class="img__box">
+              <img src="images/beer.png" alt="" />
+              <img src="images/tutor.jpeg" alt="" />
+            </div>
+            <h1 class="title">Using experience(actual)</h1>
+            <p>
+              The whole process of using the product function is basically
+              smooth. However, due to the limitation of technology and ability,
+              and as the piano is a high-precision instrument. The press
+              feedback of each key of our piano cannot be the same comapared to
+              the real piano. In addition, the projector can not see the object
+              clearly, so the actual visual experience is hard.
+            </p>
+            <p>
+              Apart from that, it is more smooth and convenient to recognize the
+              corresponding keys by pressing the notes on the music score.
+              Pressing down the corresponding key, the corresponding note on the
+              score will also emit light easily. The use of buttons to switch
+              the electronic pet is easy.
+            </p>
+            <div class="img__box">
+              <img src="images/piano.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="gsap.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"
+      integrity="sha512-yocoLferfPbcwpCMr8v/B0AB4SWpJlouBwgE0D3ZHaiP1nuu5djZclFEIj9znuqghaZ3tdCMRrreLoM8km+jIQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script src="pageTransition.js"></script>
+  </body>
+</html>

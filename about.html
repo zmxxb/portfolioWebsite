@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="basic.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body data-barba="wrapper">
+    <canvas></canvas>
+    <div class="container" data-barba="container" data-barba-namespace="bb">
+      <div class="video__inner">
+        <!-- <video src="images/com.mp4" autoplay muted loop></video> -->
+      </div>
+      <nav class="nav">
+        <div class="nav__content">
+          <h1 class="nav__logo">
+            <img src="images/logo.svg" alt="" />
+          </h1>
+          <div class="nav__menu">
+            <nav class="menu__item main">
+              <ul class="menu__itemList">
+                <li>
+                  <a href="index.html"><span>首页</span></a>
+                </li>
+                <li>
+                  <a href="product.html"><span>产品制作</span></a>
+                </li>
+                <li>
+                  <a href="graphic.html"><span>平面设计</span></a>
+                </li>
+                <li>
+                  <a href="resume.html"><span>简历</span></a>
+                </li>
+                <li class="active">
+                  <a href="about.html"><span>关于</span></a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="menu__item share">
+              <div class="share__title"><span>相关链接 ———</span></div>
+              <ul class="menu__itemList">
+                <li>
+                  <a href=""><img src="images/bili.svg" alt="" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="images/git.svg" alt="" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="images/inlink.svg" alt="" /></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </nav>
+      <main class="main__container">
+        <div class="about__inner">
+          <header class="main__header">
+            <h1><span>关于网页</span></h1>
+          </header>
+
+          <ul class="about__lists">
+            <li class="about__item one">
+              <h2>GRAPHIC</h2>
+              <div class="ph" id="one">
+                <img src="images/IMG_7650.PNG" alt="" />
+              </div>
+              <div class="inner">
+                <h3>沉浸式界面</h3>
+                <p>
+                  并对新鲜事物有很强的学习能力。除此之外，文章中提及了物理可穿戴设备来测检用户运动，介于文章的发表时间是2007年，而如今手机自带的陀螺仪系统同样可以检测用户的运动情况
+                </p>
+              </div>
+            </li>
+            <li class="about__item two">
+              <h2>CONTENT</h2>
+              <div class="ph" id="one">
+                <img src="images/IMG_7650.PNG" alt="" />
+              </div>
+              <div class="inner">
+                <p>
+                  并对新鲜事物有很强的学习能力。除此之外，文章中提及了物理可穿戴设备来测检用户运动，介于文章的发表时间是2007年，而如今手机自带的陀螺仪系统同样可以检测用户的运动情况。
+                </p>
+                <h3>简介结构</h3>
+              </div>
+            </li>
+            <li class="about__item three">
+              <h2>DYNAMIC</h2>
+              <div class="ph" id="one">
+                <img src="images/IMG_7650.PNG" alt="" />
+              </div>
+              <div class="inner">
+                <p>
+                  并对新鲜事物有很强的学习能力。除此之外，文章中提及了物理可穿戴设备来测检用户运动，介于文章的发表时间是2007年，而如今手机自带的陀螺仪系统同样可以检测用户的运动情况。
+                </p>
+              </div>
+            </li>
+            <div class="button"><a href="javascript:void(0)">返回顶部</a></div>
+          </ul>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+    <script src="star.js"></script>
+    <script src="gsap.js"></script>
+    <script src="ScrollTrigger.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      // gsap.from(".intro__list", {
+      //   scrollTrigger: {
+      //     trigger: ".intro__list",
+      //     markers: true,
+      //   },
+      //   x: 100,
+      //   opacity: 0,
+      // });
+      const button = document.querySelector(".button");
+      button.addEventListener("click", function () {
+        gsap.to("body,html", {
+          scrollTop: 0,
+          duration: 1.4,
+          ease: "power4.out",
+        });
+      });
+
+      function hide(elem) {
+        gsap.set(elem, { autoAlpha: 0 });
+      }
+
+      function animateFrom(elem) {
+        gsap.fromTo(
+          elem,
+          {
+            x: 100,
+            autoAlpha: 0,
+          },
+          {
+            x: 0,
+            duration: 1.25,
+            autoAlpha: 1,
+            ease: "expo",
+          }
+        );
+      }
+
+      gsap.utils.toArray(".about__item").forEach(function (elem) {
+        hide(elem);
+        ScrollTrigger.create({
+          trigger: elem,
+          markers: true,
+          // start: "top top",
+          once: true,
+          onEnter: function () {
+            animateFrom(elem);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

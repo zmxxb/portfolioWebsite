@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cover.css" />
+    <link rel="stylesheet" href="page.css" />
+    <title>Document</title>
+  </head>
+  <body data-barba="wrapper">
+    <canvas></canvas>
+    <div class="load__container">
+      <div class="loading-screen">
+        <div class="loading-mask"></div>
+      </div>
+    </div>
+
+    <!-- 过场动画 -->
+    <div data-barba="container" data-barba-namespace="a">
+      <div class="l-nav">
+        <!-- 创建一个装logo的盒子 -->
+        <h1 class="l-nav__logo">
+          <a href="index.html">
+            <!-- 放入素材 -->
+            <img src="images/piano_logo.png" alt="" />
+          </a>
+        </h1>
+        <!-- 创建一个content的盒子 -->
+        <div class="l-nav__content">
+          <!-- 创建一个装menu的盒子 -->
+          <ul class="l-nav__menu">
+            <div class="l-nav__menu__item -blue">
+              <a class="l-nav__text" href="about.html">
+                <img class="off" src="images/nav_about.svg" alt="" />
+                <img class="on" src="images/nav_about__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -blue" href="about.html"> </a>
+            </div>
+            <div class="l-nav__menu__item -green">
+              <a class="l-nav__text" href="resume.html">
+                <img class="off" src="images/nav_news.svg" alt="" />
+                <img class="on" src="images/nav_resume_on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -green" href="resume.html"> </a>
+            </div>
+            <div class="l-nav__menu__item -red">
+              <a class="l-nav__text" href="works.html">
+                <img class="off" src="images/nav_interactwork.svg" alt="" />
+                <img class="on" src="images/nav_interactwork__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -red" href="works.html"> </a>
+            </div>
+            <div class="l-nav__menu__item -yellow">
+              <a class="l-nav__text" href="otherswork.html">
+                <img class="off" src="images/nav_others.svg" alt="" />
+                <img class="on" src="images/nav_others__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -yellow" href="otherswork.html"> </a>
+            </div>
+            <div class="l-nav__menu__item -purple">
+              <a class="l-nav__text" href="outcome.html">
+                <img class="off" src="images/nav_outcome.svg" alt="" />
+                <img class="on" src="images/nav_outcome__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -purple" href="outcome.html"> </a>
+            </div>
+          </ul>
+          <!-- 创建一个组，没有实际含义 -->
+          <div class="l-nav__group">
+            <!-- 创建了一个装infomenu的盒子，没有设置宽高 -->
+            <div class="l-nav__infomenu">
+              <div class="l-nav__item l-nav__ad">
+                <a
+                  href="https://ixd-exhibit.uqcloud.net/plus864/"
+                  target="_blank"
+                >
+                  <div class="test">
+                    <img src="images/team_website.png" alt="" />
+                  </div>
+                  <!-- <img src="images/sayo.jpeg" alt=""> -->
+                </a>
+              </div>
+              <div class="l-nav__item l-nav__ad">
+                <a
+                  href="https://miro.com/app/board/o9J_lS_Ctiw=/"
+                  target="_blank"
+                >
+                  <div class="test">
+                    <img src="images/journal.png" alt="" />
+                  </div>
+                  <!-- <img src="images/sayo.jpeg" alt=""> -->
+                </a>
+              </div>
+            </div>
+            <div class="l-nav__copyright">
+              <p class="l-nav__copyrightTxt">
+                ©2021 zmxxb520@gmail.com <br />Jiahao Hou
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main class="l-main__wrapper">
+        <div class="l-page">
+          <div class="l-decoration">
+            <div class="star1"></div>
+            <div class="star2"></div>
+          </div>
+          <div class="l-page__content">
+            <h1 class="l-page__Ttl">Concept&Experience</h1>
+            <h1 class="title">Intended concept(ideal)</h1>
+            <p>
+              "Happy Piano" is an educational product dedicated to helping
+              children between the ages of 4 and 6 to read music note and play
+              music. This product is designed to solve children's music theory
+              learning difficulties and boring practicing experience. This
+              educational product is mainly composed of smart piano body, smart
+              music score and holographic projection with electronic pet. The
+              main function of the "Happy Piano" is to help children learn
+              common music knowledge in the process of practicing music.
+              Children can know notes, rest, beat, rhythm from music score when
+              they are practicing. In addition, the electronic pet is able to
+              encourage users by doing cute body movements and voice when they
+              complete a song or play a wrong note. At the same time, the
+              electronic pet can be changed according to the user's preferences.
+            </p>
+            <div class="img__box">
+              <img src="images/annotated_image.png" alt="" />
+              <img src="images/piano.jpeg" alt="" />
+            </div>
+
+            <h1 class="title">Intended experience(ideal)</h1>
+            <p>
+              The overall expected experience should be joyful and relaxed and
+              convenient. Specifically, in the stage where the user chooses the
+              music score and chooses the characters according to their
+              preferences, the user feels convenient. When the user clicks the
+              note on the music score or other music marks, the user should feel
+              easy. The users should feel happy when practicing and playing the
+              piano.
+            </p>
+            <div class="img__box">
+              <img src="images/plus864.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="gsap.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"
+      integrity="sha512-yocoLferfPbcwpCMr8v/B0AB4SWpJlouBwgE0D3ZHaiP1nuu5djZclFEIj9znuqghaZ3tdCMRrreLoM8km+jIQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script src="pageTransition.js"></script>
+  </body>
+</html>

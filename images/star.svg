@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="15px" viewBox="0 0 17 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>三角</title>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-1">
+            <stop stop-color="#FFB22C" offset="0%"></stop>
+            <stop stop-color="#F3C724" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="三角" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="星形" fill="url(#radialGradient-1)" points="8 12.1956876 3.29771798 14.472136 4.00966393 9.29653878 0.39154787 5.52786405 5.53383668 4.60561739 8 0 10.4661633 4.60561739 15.6084521 5.52786405 11.9903361 9.29653878 12.702282 14.472136"></polygon>
+    </g>
+</svg>

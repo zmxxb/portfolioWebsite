@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        background-color: blue;
+      }
+
+      .black {
+      }
+
+      .green {
+      }
+      .yellow {
+      }
+      .red {
+      }
+
+      main {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="box black" index="0" style="opacity: 0">
+        <img src="images/sayo.jpeg" alt="" />
+      </div>
+      <div class="box green" index="1" style="opacity: 0">
+        <img src="images/free-squared-paper-vector.jpg" alt="" />
+      </div>
+      <div class="box yellow" index="2" style="opacity: 0">
+        <img src="images/sayo.jpeg" alt="" />
+      </div>
+      <div class="box red" index="3" style="opacity: 1">
+        <img src="images/free-squared-paper-vector.jpg" alt="" />
+      </div>
+    </main>
+
+    <button>123</button>
+
+    <script src="jquery-3.5.1.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+    ></script>
+    <script>
+      // let step = 0;
+      // let saved = $(".red");
+      // const roll = setInterval(function () {
+      //   index = step % 4;
+      //   let select = $(`.box[index="${index}"]`);
+      //   console.log(select);
+      //   select.fadeTo(1000, 1, "easeInOutQuad");
+      //   saved.fadeTo(1000, 0, "easeInOutQuad");
+      //   saved = select;
+      //   step++;
+      // }, 5000);
+      $(".red").fadeToggle(1000);
+      $("button").click(function () {
+        $(".red").stop();
+        $(".red").fadeToggle(1000);
+      });
+    </script>
+  </body>
+</html>

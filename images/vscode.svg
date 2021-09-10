@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>vscode</title>
+    <g id="vscode" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#2196F3" fill-rule="nonzero" id="形状">
+            <path d="M78.581276,0 L34.6767241,40.3676909 L10.1404062,21.8736074 L0,27.775487 L24.186031,49.9997918 L0,72.2240965 L10.1404062,78.1434694 L34.6767241,59.6498024 L78.581276,100 L100,89.5973644 L100,10.4030522 L78.581276,0 Z M78.581276,26.549712 L78.581276,73.4482056 L47.4599003,49.9981257 L78.581276,26.549712 Z"></path>
+        </g>
+    </g>
+</svg>

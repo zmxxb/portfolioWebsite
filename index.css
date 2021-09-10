@@ -1,0 +1,34 @@
+/* Index配置开始 */
+/* 盒子是整个游览器页面的宽度和高度并且盒子内的内容居中 */
+.index__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.index__inner {
+    width: 350px;
+    position: relative;
+}
+
+.index__visual {
+    width: 100%;
+    height: inherit;
+}
+
+.index__button {
+    width: 9%;
+    margin: 0 auto;
+    transform: translateY(-200%);
+}
+
+/* 图片按钮采用此设置 */
+.index__button a {
+    display: block;
+    line-height: 0;
+}
+
+/* Index设置结束 */

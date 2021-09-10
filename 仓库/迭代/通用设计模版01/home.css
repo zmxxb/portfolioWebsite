@@ -1,0 +1,528 @@
+/* 初始化 Start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+canvas {
+  position: absolute;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  min-width: 1200px;
+  line-height: 1.6;
+  color: #5a3219;
+  /* 长单词换行 */
+  word-wrap: break-word;
+  /* 字体抗锯齿 */
+  -webkit-font-smoothing: antialiased;
+  font-family: YakuHanJP, "Noto Sans JP", "Yu Gothic", "YuGothic",
+    "Hiragino Kaku Gothic Pro", "Meiryo", verdana, "Osaka", "MS PGothic",
+    Sans-Serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  /* 图片高度会根据比例自动生成 */
+  /* 图片默认的打开方式s就是100% */
+
+  max-width: 100%;
+  border-style: none;
+  vertical-align: middle;
+}
+
+/* 初始化 End */
+
+/* 为了解决a会超出img边框的问题 */
+
+/* 创建了一个盒子宽260px,高100%最小的盒子，固定定位 */
+.l-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  /* 直接设置100%和min-height100%区别是 ，因为导航栏真正长度不止100%长*/
+  width: 260px;
+  height: auto;
+  min-height: 100%;
+  /* 向上方空出140px放logo */
+  padding: 140px 0 0;
+  /* 能够让横坐标超出盒子的部分可视 */
+  overflow-x: visible;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background: url(images/SUPERNOVA\ 3.svg) 30% 0% no-repeat;
+  background-size: cover;
+}
+
+/* 创建了一个330px宽的小盒子，宽度优先*/
+.l-nav__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6000;
+
+  /* 宽度优先 */
+  width: 330px;
+  height: auto;
+}
+
+/* 创建一个盒子，这个盒子内容的超出部分会scroll */
+.l-nav__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 260px;
+  min-width: 260px;
+  height: 100%;
+  padding: 220px 20px 0 20px;
+
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.l-nav__content::-webkit-scrollbar {
+  display: none;
+}
+
+/* wrapper指的是一个包裹，没有宽度和高度，会被自动撑开,相当于一个组，没有实际作用*/
+.l-nav__wrapper {
+}
+
+/* 划分了一个给slogan装的小盒子,没有设置高度，考虑到图片大小要向左移动 */
+.l-nav__catch {
+  width: 260px;
+  margin-left: -20px;
+  margin-bottom: 5px;
+}
+
+.l-nav__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.l-nav__menu__item {
+  overflow: hidden;
+}
+
+.l-nav__menu__item.green a::before {
+  background-color: rgb(91, 168, 14);
+}
+.l-nav__menu__item.blue a::before {
+  background-color: rgb(14, 99, 168);
+}
+.l-nav__menu__item.red a::before {
+  background-color: rgb(168, 14, 22);
+}
+.l-nav__menu__item.yellow a::before {
+  background-color: rgb(168, 145, 14);
+}
+
+.l-nav__menu__item a::before {
+  content: "";
+  background: rgba(124, 124, 124, 0);
+  border-radius: 8px 8px 0 0;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.1s ease;
+}
+
+.l-nav__menu__item:hover a::before {
+  height: 5px;
+}
+
+/* 属于ul 设置一个flex的盒子不用设置宽和高，可以从上面的框继承 */
+/* .l-nav__menu {
+  display: flex;
+  允许元素换行显示
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: url(images/game.svg) center center no-repeat;
+  height: 400px;
+  padding: 10px;
+} */
+
+/* .l-nav__menu__wrapper {
+  display: flex;
+  允许元素换行显示
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 50px 35px;
+} */
+
+.l-nav__menuFX {
+  /* 普通的flex单行显示 */
+  display: flex;
+  /* 允许元素换行显示 */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.l-nav__menu__wrapper li {
+  width: 50%;
+  text-align: center;
+}
+
+/* 设置了一个有50%-4px宽和56px高的小盒子，且文字剧中 */
+/* .l-nav__menu__item {
+  position: relative;
+  z-index: 2000;
+
+  width: calc(50% - 4px);
+  height: 56px;
+  margin: 0 0 8px;
+  border-radius: 8px;
+  和下面的box-shadow的位置不一样
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+
+  text-align: center;
+} */
+
+/* 创建了一个item盒子*/
+.l-nav__menu__item {
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  height: 70px;
+  margin: 0 0 8px;
+  position: relative;
+  text-align: center;
+  width: calc(50% - 4px);
+  background-color: rgb(255, 255, 255);
+  z-index: 2000;
+}
+.l-nav__menu__item.about {
+  background: url(images/guanyuwomen.svg) no-repeat;
+  background-position: 35px 10px;
+  background-size: 80%;
+  background-color: rgb(255, 255, 255);
+}
+
+.l-nav__menu__item.stworks {
+  background: url(images/zuopin.svg) no-repeat;
+  background-position: 45px 18px;
+  background-size: 60%;
+  background-color: rgb(255, 255, 255);
+}
+
+.l-nav__menu__item.resume {
+  background: url(images/resume-s.svg) no-repeat;
+  background-position: 45px 18px;
+  background-size: 60%;
+  background-color: rgb(255, 255, 255);
+}
+
+.l-nav__menu__item.other {
+  background: url(images/zuopin-2.svg) no-repeat;
+  background-position: 45px 18px;
+  background-size: 60%;
+  background-color: rgb(255, 255, 255);
+}
+
+.l-nav__menu__item img {
+  height: 14px;
+  margin-top: 15px;
+}
+
+/* 设置文字的高度为36px */
+.l-nav__menu__item img {
+  height: 18px;
+  margin-top: 26px;
+}
+
+.l-nav__menu__item:hover a .off {
+  display: none;
+}
+
+.l-nav__menu__item:hover a .on {
+  display: inline-block;
+}
+
+.l-nav__menu__item a .on {
+  display: none;
+}
+
+.l-nav__menu__item a .off {
+  display: inline-block;
+}
+
+.l-nav__menu__item.pink a {
+  /* background-color: #f8cbe0; */
+  background: url(images/bluepaper.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+/* 将a转化为行内块元素是因为这个a需要设置颜色，已经设置了宽度的盒子
+所以文字+a的组合是需要将a转化为块级元素的
+*/
+.l-nav__menu__item a {
+  display: block;
+  position: relative;
+  z-index: 1000;
+  width: auto;
+  height: 100%;
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4); */
+}
+
+/* 在这个块的上面在覆盖下层元素可以使用before加绝对定位的方式 */
+/* .l-nav__menu__item.pink a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+  background: #000;
+
+  transition: all 0.3s ease;
+} */
+
+/* 覆盖初始的颜色,这种颜色看上去会像是条纹的感觉 */
+/* .l-nav__menu__item.pink a:before {
+  background: repeating-linear-gradient(
+    -45deg,
+    #eb6ca7,
+    #eb6ca7 5px,
+    #e75297 5px,
+    #e75297 10px
+  );
+} */
+
+/* 意义暂时不明 */
+.l-nav__menu__item a img {
+  position: relative;
+  z-index: 2000;
+}
+
+/* hover的时候条纹会拉升到100%这时候同时文字会消失 */
+/* .l-nav__menu__item:hover a:before {
+  border-radius: 8px;
+  height: 100%;
+} */
+
+/* 设置了一个新的大盒子没有设置宽和高，这样作用的目的是盒子可以向下衍生 */
+.l-nav__infomenu {
+  margin: 50px 0 0;
+}
+
+.l-nav__stinfo {
+  background: url(images/tv.svg) top right no-repeat;
+  height: 250px;
+  width: auto;
+  margin-bottom: 50px;
+}
+
+/* 有设置了一个小盒子且向下margin40px */
+.l-nav__slider {
+  margin-bottom: 40px;
+}
+
+/* 设置了一个其他作用的盒子，得出结论在一个有固定范围的盒子里面只设定高度会自动补齐宽度 */
+.l-nav__movie {
+  width: auto;
+  height: 124px;
+  /* background: repeating-linear-gradient(
+    -45deg,
+    #f6b54c,
+    #f6b54c 5px,
+    #f29600 5px,
+    #f29600 10px
+  ); */
+  /* border: 3px solid rgb(250, 250, 250); */
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+/* 设置了一个其他作用的盒子，得出结论在一个有固定范围的盒子里面只设定高度会自动补齐宽度 */
+.l-nav__news {
+  height: 180px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #eb6ca7,
+    #eb6ca7 5px,
+    #e75297 5px,
+    #e75297 10px
+  );
+}
+
+/* 设置了一个其他作用的盒子，得出结论在一个有固定范围的盒子里面只设定高度会自动补齐宽度 */
+.l-nav__twitter {
+  height: 180px;
+  margin: 0 0 20px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #4cbcef,
+    #4cbcef 5px,
+    #009fe8 5px,
+    #009fe8 10px
+  );
+}
+
+/* 给每个上面的条纹盒子设置样式 */
+.l-nav__item {
+  border-radius: 10px;
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 0 44px;
+  padding: px;
+}
+
+/* 这里同理，有img的高度自动撑开盒子 start */
+.l-nav__share {
+  margin: 0 0 8px;
+}
+
+.l-nav__shareList {
+  display: flex;
+  justify-content: start;
+}
+
+.l-nav__shareItem {
+  width: 28px;
+  transition: all 0.3s ease;
+}
+
+.l-nav__shareItem + .l-nav__shareItem {
+  margin-left: 8px;
+}
+/* 这里同理，有img的高度自动撑开盒子 end */
+
+/* 告诉了我们不确定装多少东西的盒子不需要设置宽高，宽度会自动匹配最父级别的盒子 */
+.l-nav__company {
+  max-width: none;
+  margin: 0 auto 8px;
+  position: relative;
+}
+
+.l-nav__companyList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.l-nav__companyItem {
+  margin: 0 auto 4px;
+  width: 100%;
+}
+
+/* copyright的一些设置 */
+.l-nav__copyrightTxt {
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+  line-height: 16px;
+  padding-left: 1em;
+  text-indent: -1em;
+  font-size: 10px;
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+
+/* 网页右侧 start */
+
+.l-main {
+  position: relative;
+  overflow: hidden;
+}
+
+.l-mainvisual {
+  position: relative;
+  overflow: hidden;
+}
+
+.l-mainvisual__slideWrapper {
+  display: block;
+  position: absolute;
+  transform-origin: left top;
+  overflow: hidden;
+  margin-left: 260px;
+  transform: none;
+  width: calc(100% - 260px);
+  height: 100%;
+  background: url(images/image01.jpg);
+  opacity: 0.4;
+  background-size: cover;
+}
+/* .l-mainvisual__slideWrapper {
+  position: relative;
+
+  transform-origin: left top;
+  overflow: hidden;
+  margin-left: 260px;
+  transform: none;
+  width: calc(100% - 260px);
+} */
+
+/* 可能是将图片往下推的时候用的，这个是没有内容高度的 */
+/* .l-mainvisual__slideWrapper::before {
+  content: "";
+  display: block;
+  padding-top: calc(2600 / 1660 * 100%);
+} */
+
+/* 设置了一个盒子，因为绝对定位盒子脱离所以会向上跑，因为父亲有宽度和高度所以可以*/
+.l-mainvisual__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  transform: none;
+
+  overflow: hidden;
+}
+
+.l-mainvisual__ph {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  /* 这里又重新定义了bgcposition */
+  background: url(images/IMG_4032.JPG) no-repeat -8.4vw 100%/122.4vw auto;
+}
+
+.l-mainvisual__ph {
+  background-position: 0 50%;
+  background-size: auto 100%;
+}
+
+.test {
+  width: 100%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+}
+
+.l-main {
+  background-color: pink;
+}

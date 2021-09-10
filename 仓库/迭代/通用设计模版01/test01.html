@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+      .box2 {
+        background-color: green;
+        width: 100px;
+        height: 100px;
+      }
+      .box3 {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <body data-barba="wrapper">
+      <div class="box2"></div>
+      <!-- put here content that will not change
+      between your pages, like <header> or <nav> -->
+
+      <main data-barba="container" data-barba-namespace="fuck">
+        <div class="box1"></div>
+        <div class="box3"></div>
+        <a href="test02.html">123</a>
+        <!-- put here the content you wish to change
+        between your pages, like your main content <h1> or <p> -->
+      </main>
+
+      <!-- put here content that will not change
+      between your pages, like <footer> -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+  </body>
+  <script>
+    function delay(n) {
+    n = n || 2000;
+    return new Promise((done) => {
+        setTimeout(() => {
+            done();
+        }, n);
+    });
+};
+
+
+
+    $(function () {
+      barba.init({
+        sync: true,
+        transitions: [
+          {
+            name: "default-transition",
+            async leave(data) {
+              console.log(data.current.container.children[0])
+
+              if(data.current.container.getAttribute("data-barba-namespace")=='fuck'){
+                console.log(data.current.container)
+                return gsap.timeline().to(data.current.container.children[0], 1, {
+                opacity: 0,
+              }).to(data.current.container.children[1], 1, {
+                opacity: 0.5,
+              });
+              }else{
+                return gsap.to(data.current.container, 1, {
+                opacity: .7,
+              });
+              }
+  
+            },
+            async enter(data) {
+              data.current.container.remove();
+              return gsap.from(data.next.container, 1, {
+                opacity: 0,
+              });
+            },
+          },
+        ],
+      });
+    });
+  </script>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cover.css" />
+    <link rel="stylesheet" href="page.css" />
+    <title>Document</title>
+  </head>
+  <body data-barba="wrapper">
+    <canvas></canvas>
+    <div class="load__container">
+      <div class="loading-screen">
+        <div class="loading-mask"></div>
+      </div>
+    </div>
+
+    <!-- 过场动画 -->
+    <div data-barba="container" data-barba-namespace="a">
+      <div class="l-nav">
+        <!-- 创建一个装logo的盒子 -->
+        <h1 class="l-nav__logo">
+          <a href="index.html">
+            <!-- 放入素材 -->
+            <img src="images/logo.svg" alt="" />
+          </a>
+        </h1>
+        <!-- 创建一个content的盒子 -->
+        <div class="l-nav__content">
+          <!-- 创建一个装menu的盒子 -->
+          <ul class="l-nav__menu">
+            <div class="l-nav__menu__item -blue">
+              <a class="l-nav__text" href="about.html">
+                <img class="off" src="/images/nav_about.svg" alt="" />
+                <img class="on" src="/images/nav_about__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -blue" href="about.html">
+                <img src="images/guanyuwomen.svg" alt="" />
+              </a>
+            </div>
+            <div class="l-nav__menu__item -green">
+              <a class="l-nav__text" href="resume.html">
+                <img class="off" src="/images/nav_news.svg" alt="" />
+                <img class="on" src="/images/nav_resume_on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -green" href="resume.html">
+                <img src="images/resume-s.svg" alt="" />
+              </a>
+            </div>
+            <div class="l-nav__menu__item -red">
+              <a class="l-nav__text" href="works.html">
+                <img class="off" src="/images/nav_interactwork.svg" alt="" />
+                <img class="on" src="/images/nav_interactwork__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -red" href="works.html">
+                <img src="images/zuopin.svg" alt="" />
+              </a>
+            </div>
+            <div class="l-nav__menu__item -yellow">
+              <a class="l-nav__text" href="otherswork.html">
+                <img class="off" src="/images/nav_others.svg" alt="" />
+                <img class="on" src="/images/nav_others__on.svg" alt="" />
+              </a>
+              <a class="l-nav__icon -yellow" href="otherswork.html">
+                <img src="images/qita.svg" alt="" />
+              </a>
+            </div>
+          </ul>
+          <!-- 创建一个组，没有实际含义 -->
+          <div class="l-nav__group">
+            <!-- 创建了一个装infomenu的盒子，没有设置宽高 -->
+            <div class="l-nav__infomenu">
+              <div class="l-nav__item l-nav__ad">
+                <a href="">
+                  <div class="test">
+                    <img src="/images/sayo.jpeg" alt="" />
+                  </div>
+                  <!-- <img src="images/sayo.jpeg" alt=""> -->
+                </a>
+              </div>
+              <div class="l-nav__item l-nav__ad">
+                <a href="">
+                  <div class="test">
+                    <img src="/images/sayo.jpeg" alt="" />
+                  </div>
+                  <!-- <img src="images/sayo.jpeg" alt=""> -->
+                </a>
+              </div>
+              <div class="l-nav__item l-nav__ad">
+                <a href="">
+                  <div class="test">
+                    <img src="/images/sayo.jpeg" alt="" />
+                  </div>
+                  <!-- <img src="images/sayo.jpeg" alt=""> -->
+                </a>
+              </div>
+            </div>
+            <div class="l-nav__copyright">
+              <p class="l-nav__copyrightTxt">
+                ©2021 zmxxb520@gmail.com/ <br />做名小小白
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main class="l-main__wrapper">
+        <div class="l-page">
+          <div class="l-decoration">
+            <div class="star1"></div>
+            <div class="star2"></div>
+          </div>
+          <div class="l-page__content">
+            <h1 class="l-page__Ttl">关于网站</h1>
+            <div class="l-preface">
+              <div class="l-preface__inner">
+                <div class="l-preface__content">
+                  <h2>前言</h2>
+                  <p>
+                    eossadasdasdsadadasdasdas asdasdasdsadasdasd
+                    asdasdsadasdasdas asdasdas!
+                  </p>
+                </div>
+                <div class="l-preface__photo">
+                  <img src="images/sayo.jpeg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="l-parts">
+              <span class="part">[网站构成]</span>
+              <a href="" class="part active">
+                <span>颜色</span>
+              </a>
+              <a href="" class="part">
+                <span>板面</span>
+              </a>
+              <a href="" class="part">
+                <span>字体</span>
+              </a>
+              <a href="" class="part">
+                <span>特效</span>
+              </a>
+              <a href="" class="part">
+                <span>UI</span>
+              </a>
+            </div>
+            <div class="l-parts__panel">
+              <h1>颜色</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+                pariatur.
+              </p>
+
+              <div class="l-parts__content">
+                <img src="images/sayo.jpeg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="gsap.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"
+      integrity="sha512-yocoLferfPbcwpCMr8v/B0AB4SWpJlouBwgE0D3ZHaiP1nuu5djZclFEIj9znuqghaZ3tdCMRrreLoM8km+jIQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script src="pageTransition.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>sketch</title>
+    <g id="sketch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(0.000000, 6.000000)" fill-rule="nonzero">
+            <polygon id="路径" fill="#FFAE00" points="50 90.6779661 0 32.5211864 21.6101695 3.0720339 50 0 78.3898305 3.0720339 100 32.5211864"></polygon>
+            <polygon id="路径" fill="#EC6C00" points="50 90.6779661 0 32.5211864 100 32.5211864"></polygon>
+            <polygon id="路径" fill="#FFAE00" points="50 90.6779661 20.2330508 32.5211864 79.7669492 32.5211864"></polygon>
+            <polygon id="路径" fill="#FFEFB4" points="50 -1.88173394e-15 20.2330508 32.5211864 79.7669492 32.5211864"></polygon>
+            <path d="M21.6101695,3.0720339 L10.4872881,17.9025424 L0,32.5211864 L20.4449153,32.5211864 L21.6101695,3.0720339 Z M78.3898305,3.0720339 L89.5127119,17.9025424 L100,32.5211864 L79.5550847,32.5211864 L78.3898305,3.0720339 Z" id="形状" fill="#FFAE00"></path>
+            <path d="M21.6101695,3.0720339 L20.2330508,32.5211864 L50,-1.88173394e-15 L21.6101695,3.0720339 Z M78.3898305,3.0720339 L79.7669492,32.5211864 L50,-1.88173394e-15 L78.3898305,3.0720339 Z" id="形状" fill="#FED305"></path>
+        </g>
+    </g>
+</svg>

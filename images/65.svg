@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="111px" height="111px" viewBox="0 0 111 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>65</title>
+    <g id="65" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="椭圆形" stroke="#EEEEEE" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" transform="translate(55.000000, 55.000000) rotate(-46.000000) translate(-55.000000, -55.000000) " cx="55" cy="55" r="50"></circle>
+        <path d="M55,105 C82.6142375,105 105,82.6142375 105,55 C105,27.3857625 82.6142375,5 55,5 C27.3857625,5 5,27.3857625 5,55 C5,82.6142375 27.3857625,105 55,105 Z" id="椭圆形" stroke="#F5B475" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="210" transform="translate(55.000000, 55.000000) rotate(180.000000) translate(-55.000000, -55.000000) "></path>
+        <text font-family="PingFangSC-Regular, PingFang SC" font-size="36" font-weight="normal" letter-spacing="0.462857143" fill="#676767">
+            <tspan x="33" y="69">65</tspan>
+        </text>
+        <text id="%" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" letter-spacing="0.18" fill="#676767">
+            <tspan x="75" y="46">%</tspan>
+        </text>
+    </g>
+</svg>
